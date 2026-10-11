@@ -1,0 +1,35 @@
+# ═══ 密钥与本地配置（绝不提交，参考 config.example.json 自建）═══
+config.json
+.env
+.env.*
+
+# ═══ 单实例运行锁 ═══
+.nanoclaw.lock
+
+# ═══ 运行时数据：会话历史 / 长期记忆 / Agent 工作产物 ═══
+# 含用户聊天记录、open_id 等个人信息，且每次运行都会变化
+# 注意：必须忽略目录"内容"（/*）而不是目录本身（/），
+# 否则 git 不进入该目录，下面的 .gitkeep 例外无法生效
+workspace/sessions/*
+workspace/memory/*
+workspace/code/*
+# 但保留空目录骨架（.gitkeep），clone 后即可直接运行
+!workspace/*/.gitkeep
+
+# ═══ Python 缓存与构建产物 ═══
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ═══ 虚拟环境 ═══
+venv/
+.venv/
+AI_env/
+
+# ═══ 编辑器 / 系统杂项 ═══
+.vscode/
+.idea/
+.DS_Store
+*.log

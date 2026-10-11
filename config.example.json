@@ -1,0 +1,34 @@
+{
+    "api_key": "",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "models": {
+        "main": "Qwen/Qwen3.5-4B",
+        "subagent": "Qwen/Qwen3-8B",
+        "cheap": "Qwen/Qwen2.5-7B-Instruct"
+    },
+    "workspace": ".",
+    "mcp_servers": {
+        "poetry": {
+            "command": "python",
+            "args": ["mcp_servers/poetry_server.py"],
+            "description": "古诗词查询服务"
+        }
+    },
+    "max_iterations": 32,
+    "identity_file": "identity.md",
+    "concurrency": 4,
+    "subagent_max_depth": 2,
+    "feishu": {
+        "app_id": "",
+        "app_secret": ""
+    },
+    "qq": {
+        "app_id": "",
+        "app_secret": ""
+    },
+    "web": {
+        "enabled": true,
+        "host": "0.0.0.0",
+        "port": 8080
+    }
+}
